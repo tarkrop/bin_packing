@@ -33,13 +33,27 @@ ros2 run bin_packing packing_node
 
 ## 데이터 처리
 
-상자 데이터 받기: geometry_msgs/Point<br/>
+- 상자 데이터 받기: geometry_msgs/Point<br/>
 토픽 이름 - set_packing_item(토픽 보낼 때 상자 당 한 번만 보내기)<br/>
 x = width<br/>
 y = height<br/>
 z = depth<br/>
 <br/>
 
-배치 위치 출력: geometry_msgs/Point<br/>
+- 배치 위치 출력: geometry_msgs/Point<br/>
 토픽 이름 - packing_position<br/>
 (x, y, z) -> 상자의 중심 위치 출력(한 번만 출력)<br/>
+<br/>
+
+## 시각화
+
+- 컨테이너 및 박스 확인
+
+  ```
+  rviz2
+  ```
+
+  Marker Type 추가 후 <br/>
+  /box_marker<br/>
+  /edge_marker<br/>
+  적용
